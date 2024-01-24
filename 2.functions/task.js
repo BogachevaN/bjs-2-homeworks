@@ -37,11 +37,11 @@ function differenceEvenOddWorker(...arr) {
   let sumOddElement = 0
   let differenceEvenOdd = 0
   if (arr.length > 0) {
-    for (let i = 0; i < args.length; i++) {
-      if (args[i] % 2 === 0) {
-        sumEvenElement += args[i]
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 === 0) {
+        sumEvenElement += arr[i]
       } else {
-        sumOddElement += args[i]
+        sumOddElement += arr[i]
       }
     }
     differenceEvenOdd = sumEvenElement - sumOddElement
@@ -54,9 +54,9 @@ function averageEvenElementsWorker(...arr) {
   let countEvenElement = 0
   let avg = 0
   if (arr.length > 0) {
-    for (let i = 0; i < args.length; i++) {
-      if (args[i] % 2 === 0) {
-        sumEvenElement += args[i]
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 === 0) {
+        sumEvenElement += arr[i]
         countEvenElement++
       }
     }
