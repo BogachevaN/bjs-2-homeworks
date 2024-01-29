@@ -11,9 +11,10 @@ Student.prototype.setSubject = function (subjectName) {
 
 Student.prototype.addMarks = function (...marks) {
     if(this.hasOwnProperty('marks')) {
-        for (let i = 0; i < marks.length; i++) {
+        this.marks.push(...marks)
+        /*for (let i = 0; i < marks.length; i++) {
             this.marks.push(marks[i])
-        }    
+        }*/    
     }
 }
 
