@@ -26,7 +26,7 @@ Student.prototype.getAverage = function () {
           )
           return sum / this.marks.length
     } else {
-        return null
+        return 0
     }
 }
 
