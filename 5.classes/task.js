@@ -12,7 +12,6 @@
     }
 
     set state(state) {
-        
        if (state < 0) {
             this._state = 0
        } else if (state > 100) {
@@ -56,9 +55,26 @@
     }
  }
 
- class FantasticBook extends Book {
+ class DetectiveBook extends Book {
     constructor(name, releaseDate, pagesCount, author) {
         super(name, releaseDate, pagesCount, author)
         this.type = 'detective'
+    }
+ }
+
+ class Library {
+    constructor (name) {
+        this.name = name
+        this.books = []
+    }
+
+    addBook (book) {
+        if (book.state > 30) {
+            this.books.push(book)
+        }
+    }
+
+    findBookBy(type, value) {
+        for(let key )
     }
  }
