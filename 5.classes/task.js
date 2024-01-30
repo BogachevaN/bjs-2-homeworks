@@ -134,6 +134,8 @@
                 count++
             }
             return sum / count
+        } else {
+            return 0
         }
     }
   }
