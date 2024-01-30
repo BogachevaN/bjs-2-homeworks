@@ -126,7 +126,7 @@
     }
 
     getAverage() {
-        if (this.marks.valueOf() !== '{}') {
+        if (Object.keys(this.marks).length !== 0) {
             let sum = 0
             let count = 0
             for (let subject in this.marks) {
