@@ -99,15 +99,15 @@
  class Student {
     constructor(fullName) {
         this.name = fullName
-        this.subjects = {}
+        this.marks = {}
     }
 
     addMark(mark, subject) {
         if (mark >=2 && mark<=5) {
-            if (this.subjects.hasOwnProperty(subject)) {
-                this.subjects[subject].push(mark)
+            if (this.marks.hasOwnProperty(subject)) {
+                this.marks[subject].push(mark)
             } else {
-                this.subjects[subject] = [mark]
+                this.marks[subject] = [mark]
             }
         }
     }
