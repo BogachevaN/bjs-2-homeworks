@@ -75,6 +75,23 @@
     }
 
     findBookBy(type, value) {
-        for(let key )
+        for(let i=0; i < this.books.length; i++ ) {
+            if (this.books[i].hasOwnProperty(type) && this.books[i][type] === value) {
+                return this.books[i]
+            } else {
+                return null
+            }
+        }
+    }
+
+    giveBookByName(bookName) {
+        let book = this.findBookBy('name', bookName)
+        if (book !== null) {
+            let index = this.books.indexOf(book)
+            this.books.splice(index, 1)
+            return book
+        } else {
+            return null
+        }
     }
  }
