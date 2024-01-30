@@ -111,5 +111,18 @@
             }
         }
     }
+
+    getAverageBySubject (subject) {
+        if (this.marks.hasOwnProperty(subject)) {
+            let initialValue = 0
+            let sum = this.marks[subject].reduce(
+                (accumulator, currentValue) => accumulator + currentValue,
+                initialValue,
+            )
+          return sum / this.marks[subject].length
+        } else {
+            return 0
+        }
+    }
   }
 
