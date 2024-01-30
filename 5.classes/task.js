@@ -94,3 +94,22 @@
         }
     }
  }
+
+
+ class Student {
+    constructor(fullName) {
+        this.fullName = fullName
+        this.subjects = {}
+    }
+
+    addMark(mark, subject) {
+        if (mark >=2 && mark<=5) {
+            if (this.subjects.hasOwnProperty(subject)) {
+                this.subjects[subject].push(mark)
+            } else {
+                this.subjects[subject] = [mark]
+            }
+        }
+    }
+  }
+
