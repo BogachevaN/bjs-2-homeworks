@@ -12,6 +12,7 @@
     }
 
     set state(state) {
+        
        if (state < 0) {
             this._state = 0
        } else if (state > 100) {
