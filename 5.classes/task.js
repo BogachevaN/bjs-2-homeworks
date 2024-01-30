@@ -124,5 +124,17 @@
             return 0
         }
     }
+
+    getAverage() {
+        if (this.marks.valueOf() !== '{}') {
+            let sum = 0
+            let count = 0
+            for (let subject in this.marks) {
+                sum += this.getAverageBySubject(subject)
+                count++
+            }
+            return sum / count
+        }
+    }
   }
 
