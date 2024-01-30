@@ -98,7 +98,7 @@
 
  class Student {
     constructor(fullName) {
-        this.fullName = fullName
+        this.name = fullName
         this.subjects = {}
     }
 
