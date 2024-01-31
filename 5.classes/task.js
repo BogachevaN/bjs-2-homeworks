@@ -75,26 +75,31 @@
     }
 
     findBookBy(type, value) {
-        for(let i=0; i < this.books.length; i++ ) {
+        /*for(let i=0; i < this.books.length; i++ ) {
             if (this.books[i].hasOwnProperty(type) && this.books[i][type] === value) {
                 return this.books[i]
             }
         }
-        return null
+        return null*/
+        const findResult = this.books.find((item) => item[type] === value);
+        return findResult || null;
     }
 
     giveBookByName(bookName) {
-        let book = this.findBookBy('name', bookName)
+        /*let book = this.findBookBy('name', bookName)
         if (book !== null) {
             let index = this.books.indexOf(book)
             this.books.splice(index, 1)
             return book
         } else {
             return null
-        }
+        }*/
+        const book = this.findBookBy("name", bookName);
+        if (!book) return null;
+        this.books = this.books.filter((item) => item.name !== bookName);
+        return book;
     }
  }
-
 
  class Student {
     constructor(fullName) {
@@ -138,5 +143,19 @@
             return 0
         }
     }
+
+    /*getAverage() {
+        const subjectsArr = Object.keys(this.marks);
+        const subjectsCount = subjectsArr.length;
+        let averageMarksArr = [];
+        for (let i = 0; i < subjectsCount; i++) {
+            averageMarksArr.push(this.getAverageBySubject(subjectsArr[i]));
+        }
+        const allAverageMarksSum = averageMarksArr.reduce(
+            (accumulator, currentAverageMark) => accumulator + currentAverageMark,
+            0);
+        return (allAverageMarksSum / subjectsCount) || 0;
+    }*/
+
   }
 
