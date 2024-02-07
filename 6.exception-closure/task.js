@@ -27,10 +27,10 @@ class Triangle {
     }
 
     perimeter() {
-        try {
+        if ( this.a !== undefined) {
             return Number(this.a + this.b + this.c) 
-        } catch (error) {
-            return  'Ошибка! Треугольник не существует'
+        } else {
+            return  new Error('Ошибка! Треугольник не существует')
         }
     }
 
