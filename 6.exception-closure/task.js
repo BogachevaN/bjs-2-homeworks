@@ -35,8 +35,12 @@ class Triangle {
     }
 
     get area() {
-        let p = this.perimeter / 2
-        return Number((Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c))).toFixed(3))
+        if ( this.a !== undefined) {
+            let p = this.perimeter / 2
+            return Number((Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c))).toFixed(3))
+        } else {
+            return  'Ошибка! Треугольник не существует'
+        }
     }
 }
 
@@ -44,6 +48,6 @@ function getTriangle(a, b, c) {
     try {
         return new Triangle(a, b, c)
     } catch {
-        this.perimeter
+        return this
     }
 }
