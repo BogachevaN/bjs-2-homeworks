@@ -30,7 +30,7 @@ class Triangle {
         if ( this.a !== undefined) {
             return Number((this.a + this.b + this.c).toFixed(3)) 
         } else {
-            return  new Error('Ошибка! Треугольник не существует')
+            return  'Ошибка! Треугольник не существует'
         }
     }
 
