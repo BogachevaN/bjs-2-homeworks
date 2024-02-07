@@ -28,7 +28,7 @@ class Triangle {
 
     get perimeter() {
         if ( this.a !== undefined) {
-            return Number(this.a + this.b + this.c) 
+            return Number((this.a + this.b + this.c).toFixed(3)) 
         } else {
             return  new Error('Ошибка! Треугольник не существует')
         }
@@ -36,7 +36,7 @@ class Triangle {
 
     get area() {
         let p = this.perimeter / 2
-        return Number((Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c))).toFixed(2))
+        return Number((Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c))).toFixed(3))
     }
 }
 
