@@ -28,8 +28,8 @@ class Triangle {
 
     get perimeter() {
         if ( this.a !== undefined) {
-            this.perimeter = Number((this.a + this.b + this.c).toFixed(3))
-            return this.perimeter 
+            this._perimeter = Number((this.a + this.b + this.c).toFixed(3))
+            return this._perimeter
         } else {
             return  'Ошибка! Треугольник не существует'
         }
