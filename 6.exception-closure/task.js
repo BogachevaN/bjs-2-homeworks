@@ -26,12 +26,22 @@ class Triangle {
     }
 
     get perimeter() {
-        return Number((this.a + this.b + this.c).toFixed(3)) || 'Ошибка! Треугольник не существует'
+        return Number((this.a + this.b + this.c).toFixed(3))
     }
 
     get area() {
         let p = this.perimeter / 2
-        return Number((Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c))).toFixed(3)) || 'Ошибка! Треугольник не существует'
+        return Number((Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c))).toFixed(3))
+    }
+}
+
+notTriangle = {
+    get perimeter() {
+        return 'Ошибка! Треугольник не существует'
+    },
+
+    get area() {
+        return 'Ошибка! Треугольник не существует'
     }
 }
 
@@ -39,6 +49,6 @@ function getTriangle(a, b, c) {
     try {
         return new Triangle(a, b, c)
     } catch {
-        return this
+        return notTriangle
     }
 }
