@@ -26,7 +26,7 @@ class Triangle {
     }
 
     get perimeter() {
-        return Number((this.a + this.b + this.c))
+        return Number(this.a + this.b + this.c)
     }
 
     get area() {
