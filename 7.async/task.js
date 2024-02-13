@@ -18,7 +18,7 @@ class AlarmClock {
         this.alarmCollection.push({
             callback: callback,
             time: time,
-            canCall: callbackResulat
+            canCall: true
         })
     }
 
