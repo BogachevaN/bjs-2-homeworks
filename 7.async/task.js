@@ -28,7 +28,8 @@ class AlarmClock {
 
     getCurrentFormattedTime() {
         const date = new Date()
-        return date.getHours() + ":" + date.getMinutes()
+        const formatDate = date.getHours() + ":" + date.getMinutes()
+        return formatDate
     }
 
     start() {
