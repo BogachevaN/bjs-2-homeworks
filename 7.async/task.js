@@ -14,7 +14,6 @@ class AlarmClock {
             throw new Error('Отсутствуют обязательные аргументы')
         }
 
-        let callbackResulat = callback()
         this.alarmCollection.push({
             callback: callback,
             time: time,
@@ -33,16 +32,17 @@ class AlarmClock {
     }
 
     start() {
-        if (!this.intervalId) {
-            this.intervalId = setInterval(() => {
-                this.alarmCollection.forEach((alarm) => {
-                    if (alarm.time === getCurrentFormattedTime() && alarm.canCall === true) {
-                        alarm.canCall = false
-                        alarm.callback()
-                    }
-                })
-            }, 1000)
+        if (this.intervalId) {
+            return
         }
+        this.intervalId = setInterval(() => {
+            this.alarmCollection.forEach((alarm) => {
+                if (alarm.time === getCurrentFormattedTime() && alarm.canCall === true) {
+                    alarm.canCall = false
+                    alarm.callback()
+                }
+            })
+        }, 1000)
     }
 
     stop() {
